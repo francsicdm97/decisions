@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace decisions
 {
-    public class Exercise
+    public class IfStatements
     {
         public void NestedCheck(int number)
         {
@@ -87,8 +87,7 @@ namespace decisions
                     break;
             }
         }
-
-        
+ 
         public static void highScoreTracker(string playerName, int score)
         {
             int highScore = 500;
@@ -106,6 +105,50 @@ namespace decisions
                 Console.WriteLine("The old highscore of " + highScore + " could not be broken and is still held by " + highScorePlayer);
             }
         }
+
+        public static void stateOfMatter()
+        {
+            Console.Write("Enter a temperature: ");
+            string input = Console.ReadLine();
+
+            int temperature;
+            string stateOfMatter;
+
+            if (Int32.TryParse(input, out temperature))
+            {   //Checks temperature
+                stateOfMatter = temperature >= 100 ? stateOfMatter = "Gas" : temperature < 0 ? stateOfMatter = "Solid" : stateOfMatter = "Liquid";
+                Console.WriteLine("The state of matter is: " + stateOfMatter);
+            }
+            else
+            {
+                Console.WriteLine("Enter a correct temperature");
+            }          
+        }
+
+        public static void checkTmperature()
+        {
+            Console.Write("Enter a temperature: ");
+            string input = Console.ReadLine();
+
+            int temperature;
+            string temperatureoutside;
+            
+
+            if (Int32.TryParse(input, out temperature))
+            {   //Checks temperature
+                temperatureoutside = temperature <= 15 ? temperatureoutside = "It's too cold" : temperature > 28 ? temperatureoutside = "It is hot here" : temperatureoutside = "It is ok";
+                Console.WriteLine("The tempterature outside is: " + temperature);
+                Console.WriteLine(temperatureoutside);
+
+            }
+            else
+            {
+                Console.WriteLine("Enter a correct temperature");
+            }
+        }
+
+
+
     }
 }
 
