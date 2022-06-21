@@ -6,9 +6,7 @@ namespace decisions
     {
         static void Main(string[] args)
         {   
-            Exercise exercise = new Exercise();
-            exercise.register();
-            exercise.signIn();
+            Exercise.highScoreTracker("Frank", 600);
 
             Console.ReadKey();
         }
